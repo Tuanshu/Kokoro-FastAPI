@@ -30,7 +30,7 @@ download_file() {
     if [[ ! "$filename" =~ \.$model_type$ ]]; then
         echo "Warning: $filename is not a .$model_type file" >&2
         return 1
-    }
+    fi
     
     echo "Downloading $filename..."
     if curl -L "$url" -o "$output_dir/$filename"; then
